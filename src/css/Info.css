@@ -1,0 +1,195 @@
+.Info-page {
+    position: absolute;
+    /* top: 65px; */
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 99;
+    overflow: hidden;
+}
+
+.Info-form {
+    min-width: 37%;
+    /* height: 80%; */
+    padding-bottom: 50px;
+    margin: 140px auto 0;
+    padding: 80px 30px 0;
+    align-items: center;
+    background-color: aliceblue;
+    border-radius: 15px;
+    position: relative;
+    box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+}
+
+.Info-form span {
+    display: block;
+    position: absolute;
+    top: 10px;
+    left: 0px;
+    width: 100%;
+    height: 70px;
+    font-weight: 900;
+    font-size: 35px;
+    background-color: #FF3CAC;
+    background-image: linear-gradient(225deg, #FF3CAC 0%, #784BA0 50%, #2B86C5 100%);
+
+
+    background-size: 400% 400%;
+  
+    color: #000;
+    background-clip: text;
+  /* text-fill-color: transparent; */
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  
+  animation: shine 15s ease-in-out infinite;
+}
+
+@keyframes shine {
+    0% {
+        background-position: 0 50%;
+    }
+    50% {
+        background-position: 100% 50%;
+    }
+    100% {
+        background-position: 0 50%;
+    }
+  }
+
+.Info-img-holder {
+    position: absolute;
+    top: -130px;
+    left: 50px;
+    right: 0; 
+    height: 200px;
+    text-align: left;
+    /* border-radius: 50%; */
+    /* background-color: #000; */
+}
+
+.Info-img-holder img {
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    border: 5px solid #000;
+}
+
+.Info-img-holder img:hover {
+    border-color: purple;
+}
+
+.Info-form table {
+    width: 100%;
+    height: 100%;
+    border-collapse: collapse;
+}
+
+.Info-form table tr {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    height: 50px;
+    margin-bottom: 10px;
+}
+
+.Info-form table tr th {
+    width: 35%;
+    height: 100%;
+    font-size: 22px; 
+    color: rgba(0, 0, 0, 0.692);
+    letter-spacing: 3px;
+    display: inline-flex;
+    align-items: center;
+    text-align: justify;
+    user-select: none;
+}
+
+.Info-form table tr td {
+    width: 60%;
+    height: 100%;
+    display: inline-flex;
+    align-items: center;
+    text-align: right;
+    user-select: none;
+}
+
+.Info-form table tr td input {
+    width: 100%;
+    height: 100%;
+    font-size: 18px; 
+    outline: none;
+    border: none;
+    background: none;
+    line-height: 40px;
+    padding-left: 10px;
+    border-bottom: 1px solid #000;
+}
+
+.Info-form table tr:last-child {
+    justify-content: center;
+    margin-top: 50px;
+}
+
+.Info-form table tr:last-child td {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    margin-bottom: 10px;
+}
+
+.Info-form table tr button {
+    background: none;
+    border: none;
+    width: 48%;
+    height: 110%;
+    border-radius: 5px;
+    transition: 0.2s linear;
+}
+
+.Info-form table tr td button.update-btn {
+    background-color: blueviolet;
+    color: #fff;
+    font-weight: bold;
+    font-size: 20px;
+}
+
+.Info-form table tr td button.update-btn:hover {
+    cursor: pointer;
+    background-color: #000;
+
+}
+
+.Info-form table tr td .logout-btn {
+    background: none;
+    border: none;
+    width: 48%;
+    height: 110%;
+    border-radius: 5px;
+    transition: 0.2s linear;
+    background-color: rgb(212, 211, 211);
+    color: #000;
+    font-weight: bold;
+    font-size: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.Info-form table tr td .logout-btn:hover {
+    cursor: pointer;
+    background-color: #000;
+}
+
+.Info-form table tr td .logout-btn:hover {
+    color: #fff;
+}
+
+.Info-form table tr td button:hover,
+.Info-form table tr td .logout-btn:hover {
+    transform: scale(1.1);
+    transition: 0.1s linear;
+}

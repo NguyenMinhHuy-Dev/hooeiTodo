@@ -1,0 +1,436 @@
+    .Todo-page {
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        display: flex;
+        align-items: center;
+    }
+
+    .Todo-form { 
+        width: 80%;
+        height: 70%; 
+        margin: auto;
+        /* overflow: hidden; */
+        display: flex;
+        justify-content: space-around;
+    }
+
+    .Todo-left {
+        width: 40%;
+        /* height: auto; */
+        overflow: hidden;
+        padding: 20px;
+        border-radius: 15px;
+        background: #161a2b;
+        box-shadow: rgba(0, 0, 0, 0.3) 0px 19px 38px, rgba(0, 0, 0, 0.22) 0px 15px 12px;
+    }
+
+    .Todo-search {
+        width: 100%;
+        height: 40px; 
+        border-radius: 5px; 
+        /* border: 2px solid #000; */
+        display: flex;
+        justify-content: space-between;
+    }
+
+    .Todo-search .Todo-input {
+        width: 70%;
+        height: 100%;
+        outline: none;
+        background: none;
+        border: 2px solid #5d0cff;
+        font-size: 17px; 
+        color: #fff;
+        padding: 0 10px 0 10px; 
+        border-radius: 5px 0 0 0;
+    }
+    
+    .Todo-search .Todo-input::placeholder {
+        color: #fff;
+    }
+
+    .Todo-search .Todo-button {
+        width: 30%;
+        height: 100%;
+        background-color: #000;
+        color: #fff;
+        outline: none;
+        border: none;
+        font-size: 18px; 
+        border-radius: 0 5px 0 0;
+        background: linear-gradient(90deg, rgba(93,12,255,1) 0%, rgba(155,0,250,1) 100%);
+        cursor: pointer; 
+        transition: 0.2s;
+    } 
+
+    .Todo-button-reset {
+        margin-left: 10px;
+        width: 100px;
+        height: 100%;
+        border: none;
+        outline: none;
+        border-radius: 5px;
+        font-weight: 600;
+        cursor: pointer;
+        background-color: #fd79a8;
+        border: 2px solid #fd79a8;
+        transition: 0.3s;
+    } 
+
+    .Todo-button-reset:hover {
+        background-color: #000;
+        border: 2px solid #fd79a8;
+        color: #fd79a8;
+        font-size: 16px;
+        transition: 0.2s;
+    }
+
+    .Todo-add-form {
+        width: 100%;
+        height: calc(100% - 40px); 
+        padding-top: 20px;
+    }
+
+    .Todo-add-heading {
+        display: inline-block;
+        width: 100%;
+        height: 50px;
+        font-size: 23px;
+        font-weight: 700;
+        letter-spacing: 5px;
+        color: #fff;
+        text-align: justify;
+        user-select: none;
+    }
+
+    .Todo-add-form table {
+        width: 100%;
+        border-collapse: collapse;
+        margin-top: 20px;
+    }
+
+    .Todo-add-form table tr {
+        width: 100%;
+        /* height: 30px; */
+        margin-bottom: 30px;
+        display: flex;
+        align-items: flex-start;
+    }
+
+    .Todo-add-form table tr th {
+        width: 30%;
+        height: 100%;
+        text-align: justify;
+        font-size: 19px;
+        font-weight: 400;
+        color: #fff;
+        user-select: none;
+    }
+
+    .Todo-add-form table tr td {
+        width: 70%;
+        height: 100%;
+        text-align: justify;
+    }
+
+    .Todo-add-form table tr td input {
+        width: 100%;
+        height: 50px;
+        font-size: 17px; 
+        padding: 0 10px;
+        outline: none;
+        background: none; 
+        color: #fff;
+    }
+
+    .Todo-add-form table tr td input::-webkit-calendar-picker-indicator {
+        filter: invert(1);
+    }
+    
+
+    .Todo-add-form table tr td textarea {
+        resize: none;
+        width: 100%;
+        padding: 10px;
+        outline: none;
+        font-size: 17px; 
+        background: none;
+        color: #fff;
+        border: 2px solid #55efc4;
+        /* height: 300%; */
+    }
+
+    .Todo-add-form table .Todo-form-button-row { 
+        /* padding-top: 20px; */
+        width: 100%;
+        margin-bottom: 0;
+    }
+
+    .Todo-add-form table .Todo-form-button-row td {
+        width: 100%;
+        text-align: center;
+    }
+
+    .Todo-add-form table .Todo-form-button-row td button {
+        width: 100%;
+        height: 70px;
+        background-color: none;
+        outline: none;
+        font-size: 20px;
+        font-weight: bold;
+        letter-spacing: 4px;
+        color: #fff;
+        background-color: #ff4757;
+        cursor: pointer;
+        transition: 0.2s;
+        border-radius: 5px;
+        pointer-events:all;
+        user-select: none;
+    } 
+
+    .Todo-add-form table .Todo-form-button-row .Todo-update-btn {  
+        color: #000;
+        background-color: #f9ca24;
+    }
+
+    .Todo-add-form table .Todo-form-button-row .Todo-update-btn.disabled { 
+        background-color: #83743c;
+        pointer-events: none;
+    }
+
+    .Todo-add-form table .Todo-form-button-row td button:hover {
+        font-size: 26px;
+        background-color: #fff;
+        color: #ff4757;
+        transition: 0.1s;
+    }
+
+    .Todo-add-form table .Todo-form-button-row .Todo-update-btn:hover {
+        font-size: 26px;
+        background-color: #000;
+        color: #f9ca24;
+        transition: 0.1s;
+    }
+
+    .Todo-add-name {
+        border: 2px solid #fd79a8;
+    }
+
+    .Todo-add-date {
+        border: 2px solid #fab1a0;
+    }
+
+    .Todo-right {
+        width: 59%;
+        height: 100%; 
+        border: 3px solid #000;
+        border-radius: 15px;
+        /* display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column; */
+        padding: 20px;
+        /* overflow: hidden;
+        overflow-y: auto; */
+        overflow-x: hidden;
+    }
+
+    .Todo-right-empty {
+        width: 100%;
+        height: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .Todo-item-container { 
+        width: 100%;
+        min-height: 150px;
+        padding: 0 0 20px;  
+        animation: fadein 0.4s linear;
+        transition: 0.7s linear;  
+    }  
+
+    @keyframes fadein {
+        from {
+            opacity: 0;
+        }
+        to {
+            opacity: 1;
+        }
+    }
+
+    .Todo-item-container:last-child {
+        padding: 0;
+    }
+
+    .Todo-item-container.remove {   
+        padding: 0px; 
+        min-height: 0;
+        height: 0;
+        opacity: 0;
+        transform: scale(0) translateX(-250%);
+        transition: 0.8s linear; 
+    } 
+
+    .Todo-item-container.finish { 
+        padding: 0px;
+        min-height: 0;
+        height: 0;
+        opacity: 0;
+        transform: scale(0) translateX(250%);
+        transition: 0.8s linear; 
+    }
+
+    .Todo-item {
+        width: 100%;
+        min-height: 150px;
+        background-color: #130f40;
+        border-radius: 10px; 
+        overflow: hidden;
+        position: relative;
+        text-align: left;
+        box-shadow: rgba(0, 0, 0, 0.25) 0px 14px 28px, rgba(0, 0, 0, 0.22) 0px 10px 10px;
+    }
+
+    .Todo-item:hover {
+        background-color: #40407a;
+    }
+
+    .Todo-item-container.remove .Todo-item-left,
+    .Todo-item-container.remove .Todo-item-right-finish{ 
+        background-color: #ff4757;
+        transition: 0.2s linear;
+    }
+
+
+
+    .Todo-item-container.finish .Todo-item-left,
+    .Todo-item-container.finish .Todo-item-right-remove { 
+        background-color: #2ed573;
+        transition: 0.2s linear;
+    }
+
+    .Todo-item-left { 
+        width: calc(100% - 80px);
+        min-height: 150px;
+        padding: 10px;
+        background-color: inherit;
+        display: inline-block;
+        position: relative;
+    }
+
+    .Todo-item-heading { 
+        background-color: #00DBDE;
+        background-image: linear-gradient(90deg, #00DBDE 0%, #FC00FF 100%);
+
+
+        background-size: 400% 400%;
+    
+        color: #fff;
+        font-size: 18px;
+        letter-spacing: 4px;
+        text-transform: uppercase;
+
+        margin-bottom: 10px;
+        margin-left: 15px;
+
+        background-clip: text; 
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent; 
+        animation: shine 10s ease-in-out infinite;
+
+        user-select: none;
+    }
+
+    @keyframes shine {
+        0% {
+            background-position: 0 50%;
+        }
+        50% {
+            background-position: 100% 50%;
+        }
+        100% {
+            background-position: 0 50%;
+        }
+    }
+
+    .Todo-item-description {
+        color: rgba(255, 255, 255, 0.897);
+        text-align: justify;
+        text-indent: 20px;
+        user-select: none;
+    }
+
+    .Todo-item-date {
+        /* height: 40px; */
+        text-align: right;
+        margin-top: 20px;
+    }
+
+    .Todo-item-date span { 
+        color: #ffffff;
+        user-select: none;
+        font-size: 16px;
+        font-weight: 600;
+        font-style: italic;
+    }
+
+    .Todo-item-right-delete,
+    .Todo-item-right-finish {
+        position: absolute;
+        right: 0;
+        bottom: 0;
+        width: 80px;
+        height: 100%;
+        z-index: 5;
+        display: inline-flex;
+        justify-self: center;
+        align-items: center;
+        background-color: #ff4757;
+        box-shadow: rgba(0, 0, 0, 0.678) 0px 19px 38px, rgba(0, 0, 0, 0.555) 0px 15px 12px;
+        transition: 0.5s;
+        cursor: pointer;
+    }
+
+    .Todo-item-right-delete:hover {
+        width: 20%;
+        transition: 0.2s;
+    }
+
+    .Todo-item-right-delete .Icon,
+    .Todo-item-right-finish .Icon {
+        margin: 0 0 0 10%;
+        color: #fff;
+        transition: 0.5s;
+    }
+
+    .Todo-item-right-finish .Icon {
+        margin-left: 20%;
+    }
+
+    .Todo-item-right-delete:hover .Icon {
+        margin-left: 34%;
+        transform: scale(2);
+        transition: 0.2s;
+    }
+
+    .Todo-item-right-finish { 
+        width: 40px;
+        z-index: 6; 
+        background-color: #2ed573;
+    }
+
+    .Todo-item-right-finish:hover {
+        width: 15%;
+        transition: 0.3s;
+    }
+
+    .Todo-item-right-finish:hover .Icon {
+        margin-left: 42%;
+        transform: scale(2);
+        transition: 0.2s;
+    }

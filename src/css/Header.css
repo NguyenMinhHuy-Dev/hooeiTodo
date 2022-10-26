@@ -1,0 +1,40 @@
+.App-header { 
+    height: 60px;   
+    top: 0;
+    left: 0;
+    right: 0;
+    position: fixed;
+    z-index: 100;
+    list-style: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    /* background-color: rgba(0, 0, 0, 0.089); */
+}
+
+.App-header a {
+    display: inline-block;
+    width: 190px; 
+    line-height: 50px; 
+    font-size: 22px;
+    font-weight: 800;
+    color: #000;
+    margin: 0 20px;
+    letter-spacing: 5px;
+    text-transform: uppercase;
+    text-decoration: none;
+    transition: 0.2s linear;
+}
+
+.App-header a:hover {
+    color: #fff;
+    border-bottom: 2px solid #fff;
+    transform: scale(1.15);
+    transition: 0.2s ease;
+}
+
+.App-header a.active { 
+    transform: scale(1.15);
+    color: #fff;
+    border-bottom: 2px solid #fff;
+}
