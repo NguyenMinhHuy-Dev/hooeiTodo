@@ -47,6 +47,15 @@ export const Login = () => {
                 studentid: "",
                 studentemail: ""
             })
+
+            const user = await signInWithEmailAndPassword(auth, loginEmail, loginPassword); 
+
+            sessionStorage.setItem("isLogged", !isLogged)
+            sessionStorage.setItem("isWhere", "HOME")
+            sessionStorage.setItem("email", loginEmail)
+
+            setIsLogged(sessionStorage.getItem("isLogged"));
+            setEmail(loginEmail);
         } catch (error) {
             console.log(error.message);
         }
@@ -58,8 +67,7 @@ export const Login = () => {
         if (loginEmail !== "") {
             if (loginPassword !== "") {
                 try {  
-                    const user = await signInWithEmailAndPassword(auth, loginEmail, loginPassword);
-                    console.log(user)
+                    const user = await signInWithEmailAndPassword(auth, loginEmail, loginPassword); 
 
                     sessionStorage.setItem("isLogged", !isLogged)
                     sessionStorage.setItem("isWhere", "HOME")

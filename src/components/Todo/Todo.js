@@ -13,6 +13,7 @@ export const Todo = () => {
     const [input, setInput] = useState("");
     const [id, setId] = useState("");  
     const [title, setTitle] = useState("");
+    const [create, setCreate] = useState("");
     const [description, setDescription] = useState("");
     const [deadline, setDeadline] = useState("");
 
@@ -177,6 +178,7 @@ export const Todo = () => {
                 <div id="Todo-right" className="Todo-right">
                     {todos.filter(function(todo) { return todo.email === email && todo.status === "Processing"; }).length !== 0 ? (
                         todos.filter(function(todo) { return todo.email === email && todo.status === "Processing"; }).map((todo) => { 
+                            const date = todo.create.split("/").reverse().join("-"); 
                             return (
                                 <div key={todo.id} className="Todo-item-container"> 
                                     <div  id="item" className="Todo-item">
@@ -194,6 +196,7 @@ export const Todo = () => {
                                                     <p>{todo.description}</p>
                                                 </div>
                                                 <div className="Todo-item-date">
+                                                    <span className="Todo-item-create">Create at: {date}</span>
                                                     <span>Deadline: {todo.deadline}</span>
                                                 </div>
                                             </div>
